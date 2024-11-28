@@ -1,0 +1,152 @@
+/* General App Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Background Colors */
+.default-bg {
+  background: linear-gradient(to bottom, #ffa726, #2196f3);
+}
+
+.clear-bg {
+  background: linear-gradient(to bottom, #ffcc80, #4fc3f7);
+}
+
+.cloudy-bg {
+  background: linear-gradient(to bottom, #b0bec5, #78909c);
+}
+
+.rain-bg {
+  background: linear-gradient(to bottom, #90caf9, #0d47a1);
+}
+
+.snow-bg {
+  background: linear-gradient(to bottom, #e3f2fd, #b3e5fc);
+}
+
+.thunder-bg {
+  background: linear-gradient(to bottom, #cfd8dc, #455a64);
+}
+
+.drizzle-bg {
+  background: linear-gradient(to bottom, #80deea, #004d40);
+}
+
+.mist-bg {
+  background: linear-gradient(to bottom, #cfd8dc, #90a4ae);
+}
+
+/* Input and Button Styles */
+input {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  width: 250px;
+  outline: none;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+
+/* Current Weather Section */
+.weather-info {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.weather-info h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.weather-info p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+/* Forecast Section */
+.forecast {
+  margin-top: 20px;
+  text-align: left;
+  width: 100%; /* Use full width */
+  max-width: 900px; /* Allow more space for five columns */
+}
+
+.forecast h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.forecast-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Exactly 5 columns */
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Forecast Items */
+.forecast-item {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent box */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.forecast-item:hover {
+  transform: translateY(-5px); /* Slight hover effect */
+}
+
+.forecast-item p {
+  margin: 5px 0;
+}
+
+.forecast-item p:first-child {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .forecast-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust for small screens */
+  }
+}
